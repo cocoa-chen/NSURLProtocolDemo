@@ -39,6 +39,7 @@
         [_sw setOn:NO];
     }
     [self.view addSubview:_tip];
+    //点击按钮进行网络请求
     UIButton *fetchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     fetchButton.frame = CGRectMake(100, 200, 100, 40);
     [fetchButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -61,6 +62,7 @@
 //请求网络信息
 - (void)fetchInfo
 {
+    NSLog(@"开始请求网络信息");
 #warning 替换成自己项目中的url
     NSURL *url = [NSURL URLWithString:@"http://www.yourAppUrl.com:80/yourProject/api"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
